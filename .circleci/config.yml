@@ -11,7 +11,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dotnet-packages-v1-{{ checksum "NLayer.API.csproj" }}
+            - dotnet-packages-v1-{{ checksum "..\NLayer.Caching\NLayer.Caching.csproj" }}
       - run:
           name: "Install project dependencies"
           command: dotnet.exe restore
