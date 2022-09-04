@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NLayer.Repository;
 
@@ -11,9 +12,10 @@ using NLayer.Repository;
 namespace NLayer.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220901084258_newdb12")]
+    partial class newdb12
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -170,7 +172,7 @@ namespace NLayer.Repository.Migrations
                             Id = 1,
                             Active = false,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2022, 9, 4, 14, 15, 53, 452, DateTimeKind.Local).AddTicks(1420),
+                            CreatedDate = new DateTime(2022, 9, 1, 11, 42, 58, 600, DateTimeKind.Local).AddTicks(3263),
                             Height = 0,
                             Image = "resim1",
                             Name = "Zigon Sehpa1",
@@ -183,7 +185,7 @@ namespace NLayer.Repository.Migrations
                             Id = 2,
                             Active = false,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2022, 9, 4, 14, 15, 53, 452, DateTimeKind.Local).AddTicks(1434),
+                            CreatedDate = new DateTime(2022, 9, 1, 11, 42, 58, 600, DateTimeKind.Local).AddTicks(3273),
                             Height = 0,
                             Image = "resim2",
                             Name = "Orta Sehpa1",
@@ -196,7 +198,7 @@ namespace NLayer.Repository.Migrations
                             Id = 3,
                             Active = false,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2022, 9, 4, 14, 15, 53, 452, DateTimeKind.Local).AddTicks(1437),
+                            CreatedDate = new DateTime(2022, 9, 1, 11, 42, 58, 600, DateTimeKind.Local).AddTicks(3275),
                             Height = 0,
                             Image = "resim3",
                             Name = "Zigon Sehpa2",
@@ -209,7 +211,7 @@ namespace NLayer.Repository.Migrations
                             Id = 4,
                             Active = false,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2022, 9, 4, 14, 15, 53, 452, DateTimeKind.Local).AddTicks(1440),
+                            CreatedDate = new DateTime(2022, 9, 1, 11, 42, 58, 600, DateTimeKind.Local).AddTicks(3276),
                             Height = 0,
                             Image = "resim4",
                             Name = "Köşe Koltuk1",
@@ -222,7 +224,7 @@ namespace NLayer.Repository.Migrations
                             Id = 5,
                             Active = false,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2022, 9, 4, 14, 15, 53, 452, DateTimeKind.Local).AddTicks(1441),
+                            CreatedDate = new DateTime(2022, 9, 1, 11, 42, 58, 600, DateTimeKind.Local).AddTicks(3276),
                             Height = 0,
                             Image = "resim5",
                             Name = "Köşe Koltuk2",

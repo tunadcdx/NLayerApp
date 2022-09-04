@@ -7,10 +7,9 @@ using NLayer.Repository.Repositories;
 using NLayer.Repository.UnitOfWorks;
 using NLayer.Service.Mapping;
 using NLayer.Service.Services;
-using NLayer.Caching;
 using System.Reflection;
 
-namespace NLayer.API.Modules
+namespace NLayer.Web.Modules
 {
     public class RepoServiceModule : Autofac.Module
     {
@@ -24,11 +23,17 @@ namespace NLayer.API.Modules
             var serviceAssembly = Assembly.GetAssembly(typeof(MapProfile));
 
 
-            builder.RegisterAssemblyTypes(apiAssembly,repoAssembyl,serviceAssembly).Where(x=>x.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerLifetimeScope();
+            builder.RegisterAssemblyTypes(apiAssembly, repoAssembyl, serviceAssembly).Where(x => x.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerLifetimeScope();
 
             builder.RegisterAssemblyTypes(apiAssembly, repoAssembyl, serviceAssembly).Where(x => x.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerLifetimeScope();
 
-            //builder.RegisterType<ProductService>().As<IProductService>();
+
+
+
+
+
         }
+
+
     }
 }

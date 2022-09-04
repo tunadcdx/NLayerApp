@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NLayer.Core
+﻿namespace NLayer.Core
 {
     public abstract class BaseEntity
     {
@@ -12,6 +6,6 @@ namespace NLayer.Core
         public bool Active { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
-
+        
     }
 }
