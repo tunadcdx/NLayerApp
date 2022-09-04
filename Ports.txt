@@ -1,0 +1,5 @@
+API -> https://localhost:7147/
+API -> http://localhost:5147/
+
+WEB -> https://localhost:7247/
+WEB -> http://localhost:5247

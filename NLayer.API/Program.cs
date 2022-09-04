@@ -37,6 +37,8 @@ builder.Services.AddMemoryCache();
 
 builder.Services.AddScoped(typeof(NotFoundFilter<>));
 builder.Services.AddAutoMapper(typeof(MapProfile));
+
+
 builder.Services.AddDbContext<AppDbContext>(x =>
 {
     x.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection"), option =>
