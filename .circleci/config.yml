@@ -18,6 +18,12 @@ jobs:
       - run:
           name: "Build Application according to some given configuration"
           command: dotnet.exe build --configuration Release
+      - run:         
+         docker login --username=yunustuna.tak@gmail.com --password=20d06bd9-3ebd-4691-8de8-26dff09abda2 registry.heroku.com
+         docker tag aspnetapp registry.heroku.com/vesyapi/web
+         docker push registry.heroku.com/vesyapi/web                
+         curl https://cli-assets.heroku.com/install.sh | sh
+         heroku container:release web -a vesyapi
 workflows:
   heroku_deploy:
     jobs:
