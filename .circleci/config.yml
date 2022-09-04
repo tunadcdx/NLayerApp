@@ -32,3 +32,12 @@ workflows:
   heroku_deploy:
     jobs:
       - heroku/deploy-via-git
+    api-key:
+    default: 20d06bd9-3ebd-4691-8de8-26dff09abda2
+    description: The name of the environment variable containing your Heroku API Key.
+    type: env_var_name
+  app-name:
+    default: vesyapi
+    type: string
+          
+      
