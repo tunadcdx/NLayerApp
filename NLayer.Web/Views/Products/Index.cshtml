@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+@model List<ProductWithCategoryDTO>
+<h1>Ürünler</h1>
+
+<table class="table table-stripted">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Ürün Adı</td>
+            <td>Fiyat</td>
+            <td>Stok</td>
+            <td>Kategori Id</td>
+            <td>Renk</td>
+            <td>Yükseklik</td>
+            <td>Genişlik</td>
+            <td>Oluşturma Tarihi</td>
+            <td>Güncelleme Tarihi</td>
+            
+            <td>Aksiyon</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Stock</td>
+                <td>@item.Category.Name</td>
+                <td>@item.Color</td>
+                <td>@item.Height</td>
+                <td>@item.Width</td>
+                <td>@item.CreatedDate</td>
+                <td>@item.UpdatedDate</td>
+                <td>
+                    <a class="btn btn-warning" asp-controller="Products" asp-action="Update" asp-route-id="@item.Id">Ürün Güncelle</a>
+                    <a class="btn btn-danger" asp-controller="Products" asp-action="Remove" asp-route-id="@item.Id">Ürün Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-primary" href="/Products/Save">Yeni Ürün Ekle</a>
+
+

@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using NLayer.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NLayer.Repository.Confoguration
 {
@@ -20,7 +15,7 @@ namespace NLayer.Repository.Confoguration
             builder.Property(x => x.Stock).IsRequired();
             builder.Property(x => x.Price).IsRequired().HasColumnType("decimal(18,2)");
             builder.ToTable("Products");
-            builder.HasOne(x => x.Category).WithMany(x=>x.Products).HasForeignKey(x=>x.CategoryId);
+            builder.HasOne(x => x.Category).WithMany(x => x.Products).HasForeignKey(x => x.CategoryId);
         }
     }
 }
