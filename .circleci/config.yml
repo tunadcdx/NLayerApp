@@ -18,9 +18,9 @@ jobs:
       - run:
           name: "Build Application according to some given configuration"
           command: dotnet.exe build --configuration Release
-      #   - run:
-      #       name: Deploy Main to Heroku
-      #       command: git push https://heroku:20d06bd9-3ebd-4691-8de8-26dff09abda2@git.heroku.com/vesyapi.git
+      - run:
+          name: Deploy Main to Heroku
+          command: git push https://heroku:20d06bd9-3ebd-4691-8de8-26dff09abda2@git.heroku.com/vesyapi.git
       # - run:         
       #    docker login --username=yunustuna.tak@gmail.com --password= registry.heroku.com
       #    docker tag aspnetapp registry.heroku.com/vesyapi/web
